@@ -7,8 +7,9 @@ import time
 def main():
     alg = logger.AppLog()
     appRunningEvent = threading.Event()
-
-    tWebserver = threading.Thread(target=webserverManager.manager, args=())
+    ip = "127.0.0.1"
+    port = 5001
+    tWebserver = threading.Thread(target=webserverManager.manager, args=(alg, ip, port))
     tWebserver.setDaemon(True)
     tWebserver.setName("webserver")
     tWebserver.start()

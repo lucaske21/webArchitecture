@@ -1,24 +1,24 @@
 import logging
+from typing import List
 
 class AppLog:
     def __init__(self) -> None:
-        pass
         logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
     
-    def info(self, stringInfo):
-        logging.info(stringInfo)
+    def info(self, input: List[str]):
+        logging.info(" ".join(map(str, input)))
 
-    def warning(self, stringInfo):
-        logging.warning(stringInfo)
+    def warning(self, input: List[str]):
+        logging.warning(" ".join(map(str, input)))
 
-    def error(self, stringInfo):
-        logging.error(stringInfo)
+    def error(self, input: List[str]):
+        logging.error(" ".join(map(str, input)))
 
-    def info(self, stringInfo):
-        logging.debug(stringInfo)
+    def debug(self, input: List[str]):
+        logging.debug(" ".join(map(str, input)))
 
-    def critical(self, stringInfo):
-        logging.critical(stringInfo)
+    def critical(self, input: List[str]):
+        logging.critical(" ".join(map(str, input)))
 
-    def exception(self, stringInfo):
-        logging.exception(stringInfo)
+    def exception(self, input: List[str]):
+        logging.exception(" ".join(map(str, input)))

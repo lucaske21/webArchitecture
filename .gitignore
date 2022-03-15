@@ -16,5 +16,11 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 .pyc
-
+.whl
+venv
+.pyc
 # End of https://www.toptal.com/developers/gitignore/api/venv
+tools/__pycache__/logger.cpython-39.pyc
+manager/__pycache__/webserverManager.cpython-39.pyc
+venv/share/python-wheels/appdirs-1.4.4-py2.py3-none-any.whl
+server/__pycache__/webServer.cpython-39.pyc

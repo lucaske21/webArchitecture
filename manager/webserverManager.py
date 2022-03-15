@@ -1,11 +1,10 @@
 from server import webServer
+from tools import logger
 import threading
 
 
-def manager():
-    ip = "127.0.0.1"
-    port = 5001
-    webserver = webServer.Webserver(ip, port)
+def manager(alg: logger.AppLog, ip: str, port: int):
+    webserver = webServer.Webserver(ip, port, alg=alg)
     webserver.run()
     
 
