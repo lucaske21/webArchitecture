@@ -12,7 +12,7 @@ class Webserver:
         @self.app.route("/")
         def hello_world():
             logInfo = [self.TAG, "Route", "hello_world", "invoked"]
-            self.alg.critical(logInfo)
+            self.alg.debug(logInfo)
             return "<p>Hello, World!</p>"
     
     def run(self):
